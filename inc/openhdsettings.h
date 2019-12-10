@@ -10,9 +10,10 @@
 #include <QtQuick>
 #include <QQmlPropertyMap>
 
+#include "util.h"
+
 class QUdpSocket;
 
-typedef QMap<QString, QVariant> VMap;
 
 Q_DECLARE_METATYPE(VMap);
 

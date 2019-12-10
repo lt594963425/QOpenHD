@@ -3,6 +3,9 @@
 
 #include <QObject>
 
+typedef QMap<QString, QVariant> VMap;
+
+
 #include <common/mavlink.h>
 #include <ardupilotmega/ardupilotmega.h>
 

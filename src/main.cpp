@@ -114,6 +114,9 @@ int main(int argc, char *argv[]) {
 
     qmlRegisterType<QOpenHDLink>("OpenHD", 1,0, "QOpenHDLink");
 
+    qRegisterMetaType<VMap>("VMap");
+
+
     auto openhd = OpenHD::instance();
 
     QTimer timer;

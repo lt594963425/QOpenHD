@@ -284,6 +284,10 @@ SettingsPopupForm {
         openHDSettings.saveSettings(remoteSettings);
     }
 
+    function syncLocalSettings() {
+        link.syncSettings();
+    }
+
     function openSettings() {
         openHDSettings.fetchSettings();
         settings_panel.settings_popup.open();
@@ -296,10 +300,12 @@ SettingsPopupForm {
 
     closeButton.onClicked: {
         settings_popup.close();
+        syncLocalSettings();
     }
 
     save.onClicked: {
         writeRemoteSettings();
+        syncLocalSettings();
     }
 
 
